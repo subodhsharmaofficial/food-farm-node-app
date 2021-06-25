@@ -4,35 +4,6 @@ const url = require('url');
 const slugify = require('slugify');
 const replaceTemplate = require('./modules/replaceTemplate');
 
-//-------FILES---------
-//Reading and Writing files in Synchronous way
-/*
-const textIn = fs.readFileSync('./txt/input.txt', 'utf-8')
-
-console.log(textIn)
-
-const textOut = `This is what we know about Avocado: ${textIn}\nCreated on ${Date.now()}`;
-
-fs.writeFileSync('./txt/output.txt', textOut);
-
-console.log('file written')
-*/
-
-//Reading and Writing files in Asynchronous way
-/*
-fs.readFile('./txt/start.txt', 'utf-8', (err, data1)=>{
-    if(err) return console.log('ERROR! 💥')
-    console.log(data1)
-
-    fs.readFile('./txt/append.txt', 'utf-8', (err, data2)=>{
-        console.log(data2);
-        fs.writeFile('/txt.final.txt', `${data2}\n${data3}`, 'utf-8', (err)=>{
-        console.log('Your data has been written! 😀')
-    })
-
-    })
-})
-*/
 const tempOverview = fs.readFileSync(
   `${__dirname}/templates/template-overview.html`,
   'utf-8'
