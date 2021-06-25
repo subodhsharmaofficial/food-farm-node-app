@@ -99,6 +99,6 @@ const server = http.createServer((req, res) => {
   }
 });
 
-server.listen(8000, 'https://food-farm.herokuapp.com/', () => {
+server.listen(8000, '127.0.0.1', () => {
   console.log('Server is loading...');
 });
