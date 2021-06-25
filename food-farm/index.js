@@ -99,6 +99,7 @@ const server = http.createServer((req, res) => {
   }
 });
 
-server.listen(8000, '127.0.0.1', () => {
+// server.listen(8000, '127.0.0.1', () => {
+server.listen(process.env.PORT || 8000, () => {
   console.log('Server is loading...');
 });
